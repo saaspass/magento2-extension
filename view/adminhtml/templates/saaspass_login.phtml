@@ -1,0 +1,26 @@
+<?php  if ($this->helper->getApiKey() != "" && $this->helper->getApiPass() != "" && $this->helper->getBarcode() != "") : ?>
+<br>
+    <div class="links" >
+        <?php /* @noEscape */ echo '<img src="data:image/png;base64,' . $this->helper->getBarcode() . '" />' ?>
+        <script type="text/x-magento-init">
+            {
+                "*" : {
+                "Saaspass_Login/js/login" : {}
+                }
+            }
+        </script>
+    </div>
+    </hr>
+<input id="session" name="session" type="hidden" value="<?php /* @noEscape */ echo $this->helper->getSession() ?>">
+
+<?php else : ?>
+
+<?php endif; ?>
+
+<script type="text/x-magento-init">
+{
+    "*" : {
+        "Saaspass_Login/js/poll" : {}
+    }
+}
+</script>

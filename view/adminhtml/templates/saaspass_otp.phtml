@@ -1,0 +1,18 @@
+<?php  if ($this->helper->getApiKey() != "" && $this->helper->getApiPass() != "" && $this->helper->getBarcode() != "") : ?>
+<div class="admin__field  field-username">
+    <label for="username" class="admin__field-label">
+    <br>
+        <span><?php /* @escapeNotVerified */ __('OTP') ?></span>
+    </label> <br>
+    <input class="admin__control-text" type="number" id="otp" name="otp" data-validate="{required:false}" >
+</div>
+<?php else : ?>
+<br>
+    <div class="">
+        <p>
+            SAASPASS installed but not configured.
+            <br>
+            Please contact your system administrator.
+        </p>
+    </div>
+<?php endif; ?>

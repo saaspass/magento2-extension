@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<page >
+    <update handle="admin_login" />
+    <body>
+     <referenceContainer name="form.buttons">
+            <block before="-"  class="Saaspass\Login\Block\SaaspassLoginBlock" name="saaspass.otp" template="Saaspass_Login::saaspass_otp.phtml" />
+        </referenceContainer>
+      <referenceContainer name="form.buttons">
+            <block before="adminhtml_auth_login_form_key"  class="Saaspass\Login\Block\SaaspassLoginBlock" name="saaspass.login" template="Saaspass_Login::saaspass_login.phtml" />
+        </referenceContainer>
+    </body>
+</page>

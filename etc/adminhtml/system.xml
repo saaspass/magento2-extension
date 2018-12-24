@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mageplaza" translate="label" sortOrder="10">
+            <label>SAASPASS</label>
+        </tab>
+        <section id="saaspass" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Configuration</label>
+            <tab>mageplaza</tab>
+            <resource>Saaspass_Login::login_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>SAASPASS Configuration </label>
+                <comment><![CDATA[<h3>How to setup SAASPASS</h3><hr><br>To protect your Magento with SAASPASS, you need to create a Magento application in SAASPASS and follow the integration instructions.<br>Upon create the application in SAASPASS, you will be gain access to the parameters that are required in the below form.<br><br> <h3>SETTINGS</h3><hr><br>]]></comment>
+                <!-- <label>To protect your Magento with SAASPASS, you need to create a Magento application on SAASPASS and follow the instructions there.
+                        You can get this from SAASPASS portal by following the integration instructions.</label> -->
+                <field id="saaspass_application_key" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>SAASPASS APPLICATION KEY</label>
+                    <comment>Configure the SAASPASS Application Key before enabling SAASPASS. Read the instructions for more help.</comment>
+                </field>
+                 <field id="saaspass_application_pass" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>SAASPASS APPLICATION PASSWORD</label>
+                    <comment>Configure the SAASPASS Application Password before enabling SAASPASS. Read the instructions for more help.</comment>
+                </field>
+                <field id="native_disable" translate="label" type="select" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="1" >
+                    <label>Disable Native Login and use only SAASPASS as login method.</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Before disabling native logins, please verify that you have successfully configured SAASPASS!</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
